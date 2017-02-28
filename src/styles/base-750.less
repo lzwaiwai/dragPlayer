@@ -1,0 +1,290 @@
+@base: 75;
+
+.width(@a) {
+  width: unit(@a/2, px);
+  width: unit(@a/@base, rem);
+}
+
+.height(@a) {
+  height: unit(@a/2, px);
+  height: unit(@a/@base, rem);
+}
+
+.left(@a) {
+  left: unit(@a/2, px);
+  left: unit(@a/@base, rem);
+}
+
+.right(@a) {
+  right: unit(@a/2, px);
+  right: unit(@a/@base, rem);
+}
+
+.top(@a) {
+  top: unit(@a/2, px);
+  top: unit(@a/@base, rem);
+}
+
+.bottom(@a) {
+  bottom: unit(@a/2, px);
+  bottom: unit(@a/@base, rem);
+}
+
+.max-height(@a) {
+  max-height: unit(@a/2, px);
+  max-height: unit(@a/@base, rem);
+}
+
+.min-height(@a) {
+  min-height: unit(@a/2, px);
+  min-height: unit(@a/@base, rem);
+}
+
+.max-width(@a) {
+  max-width: unit(@a/2, px);
+  max-width: unit(@a/@base, rem);
+}
+
+.min-width(@a) {
+  min-width: unit(@a/2, px);
+  min-width: unit(@a/@base, rem);
+}
+
+.line-height(@a) {
+  line-height: unit(@a/2, px);
+  line-height: unit(@a/@base, rem);
+}
+
+.padding(@a, @b) {
+  padding: unit(@a/2, px) unit(@b/2, px);
+  padding: unit(@a/@base, rem) unit(@b/@base, rem);
+}
+
+.padding(@a, @b, @c, @d) {
+  padding: unit(@a/2, px) unit(@b/2, px) unit(@c/2, px) unit(@d/2, px);
+  padding: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+}
+
+.padding(@a) {
+  padding: unit(@a/2, px);
+  padding: unit(@a/@base, rem);
+}
+
+.padding-left(@a) {
+  padding-left: unit(@a/2, px);
+  padding-left: unit(@a/@base, rem);
+}
+
+.padding-right(@a) {
+  padding-right: unit(@a/2, px);
+  padding-right: unit(@a/@base, rem);
+}
+
+.padding-top(@a) {
+  padding-top: unit(@a/2, px);
+  padding-top: unit(@a/@base, rem);
+}
+
+.padding-bottom(@a) {
+  padding-bottom: unit(@a/2, px);
+  padding-bottom: unit(@a/@base, rem);
+}
+
+.margin(@a, @b, @c, @d) {
+  margin: unit(@a/2, px) unit(@b/2, px) unit(@c/2, px) unit(@d/2, px);
+  margin: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+}
+
+.margin(@a, @b) {
+  margin: unit(@a/2, px) unit(@b/2, px) unit(@a/2, px) unit(@b/2, px);
+  margin: unit(@a/@base, rem) unit(@b/@base, rem) unit(@a/@base, rem) unit(@b/@base, rem);
+}
+
+.margin(@a) {
+  margin: unit(@a/2, px);
+  margin: unit(@a/@base, rem);
+}
+
+.margin-left(@a) {
+  margin-left: unit(@a/2, px);
+  margin-left: unit(@a/@base, rem);
+}
+
+.margin-right(@a) {
+  margin-right: unit(@a/2, px);
+  margin-right: unit(@a/@base, rem);
+}
+
+.margin-top(@a) {
+  margin-top: unit(@a/2, px);
+  margin-top: unit(@a/@base, rem);
+}
+
+.margin-bottom(@a) {
+  margin-bottom: unit(@a/2, px);
+  margin-bottom: unit(@a/@base, rem);
+}
+
+.border-width(@a) {
+  border-width: unit(@a/2, px);
+  border-width: unit(@a/@base, rem);
+}
+
+.border-width(@a, @b) {
+  border-width: unit(@a/2, px) unit(@b/2, px);
+  border-width: unit(@a/@base, rem) unit(@b/@base, rem);
+}
+
+.border(@a, @b, @c) {
+  border: unit(@a/2, px) @b @c;
+  border: unit(@a/@base, rem) @b @c;
+}
+
+.border-top(@a, @b, @c) {
+  border-top: unit(@a/2, px) @b @c;
+  border-top: unit(@a/@base, rem) @b @c;
+}
+
+.border-bottom(@a, @b, @c) {
+  border-bottom: unit(@a/2, px) @b @c;
+  border-bottom: unit(@a/@base, rem) @b @c;
+}
+
+.border-left(@a, @b, @c) {
+  border-left: unit(@a/2, px) @b @c;
+  border-left: unit(@a/@base, rem) @b @c;
+}
+
+.border-right(@a, @b, @c) {
+  border-right: unit(@a/2, px) @b @c;
+  border-right: unit(@a/@base, rem) @b @c;
+}
+
+// 支持 PC 和 H5 的字体
+.font-size(@a) {
+  @media all and (max-width: 1024px) {
+    font-size: unit(@a/2, px);
+    font-size: unit(@a/@base, rem);
+  }
+  font-size: unit(@a/2, px);
+}
+
+.background-size (@x) {
+  background-size: unit(@x/2, px);
+  background-size: unit(@x/@base, rem);
+}
+
+.background-size (@x, @y) {
+  background-size: unit(@x/2, px) unit(@y/2, px);
+  background-size: unit(@x/@base, rem) unit(@y/@base, rem);
+}
+
+.background-position (@x, @y) {
+  background-position: unit(@x/2, px) unit(@y/2, px);
+  background-position: unit(@x/@base, rem) unit(@y/@base, rem);
+}
+
+// 文本只显示一行，超出部分隐藏
+.line-hide() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 删除app中的click背景
+.deleteOutline () {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+.ellipsis() {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.border-radius(@a) {
+  -webkit-border-radius: unit(@a/2, px);
+  -moz-border-radius: unit(@a/2, px);
+  -ms-border-radius: unit(@a/2, px);
+  -o-border-radius: unit(@a/2, px);
+  border-radius: unit(@a/2, px);
+  -webkit-border-radius: unit(@a/@base, rem);
+  -moz-border-radius: unit(@a/@base, rem);
+  -ms-border-radius: unit(@a/@base, rem);
+  -o-border-radius: unit(@a/@base, rem);
+  border-radius: unit(@a/@base, rem);
+}
+
+.border-radius(@a, @b, @c, @d) {
+  -webkit-border-radius: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+  -moz-border-radius: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+  -ms-border-radius: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+  -o-border-radius: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+  border-radius: unit(@a/@base, rem) unit(@b/@base, rem) unit(@c/@base, rem) unit(@d/@base, rem);
+}
+
+.vertical-align(@a) {
+  vertical-align: unit(@a/2, px);
+  vertical-align: unit(@a/@base, rem);
+}
+
+.translateY(@a) {
+  -webkit-transform: translateY(unit(@a/2, px));
+  -webkit-transform: translateY(unit(@a/@base, rem));
+  -moz-transform: translateY(unit(@a/2, px));
+  -moz-transform: translateY(unit(@a/@base, rem));
+  transform: translateY(unit(@a/2, px));
+  transform: translateY(unit(@a/@base, rem));
+}
+
+.translateX-5Y(@a) {
+  -webkit-transform: translateX(-50%) translateY(unit(@a/2, px));
+  -webkit-transform: translateX(-50%) translateY(unit(@a/@base, rem));
+  -moz-transform: translateX(-50%) translateY(unit(@a/2, px));
+  -moz-transform: translateX(-50%) translateY(unit(@a/@base, rem));
+  transform: translateX(-50%) translateY(unit(@a/2, px));
+  transform: translateX(-50%) translateY(unit(@a/@base, rem));
+}
+
+
+// 文本只显示一行，超出部分隐藏
+.line-hide() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// img
+.img(@width, @height) {
+  .wrap-img {
+    display: block;
+    .width(@width);
+    .height(@height);
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    .img {
+      .max-width(@width);
+      .max-height(@height);
+      vertical-align: middle;
+    }
+  }
+}
+
+// 三角形
+.triangle(@a, @topColor, @rightColor, @bottomColor, @leftColor) {
+  width: 0;
+  height: 0;
+  .border-width(@a);
+  border-style: solid;
+  border-color: @topColor @rightColor @bottomColor @leftColor;
+}
+
+.text-indent(@a) {
+  text-indent: unit(@a/@base, rem);
+}
