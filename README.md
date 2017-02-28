@@ -4,9 +4,9 @@
 
 ## demo
 
-**[live demo](https://static.tinfinite.com/gif/yanshi.gif)**
+**[live demo](https://o3pvuu23u.qnssl.com/mp4/dragPlayer.mp4)**
 
-![demo](http://o4a7cbihz.qnssl.com/cover/ec293914-fc98-43e4-9778-e135720ec6d9)
+<img src="http://o4a7cbihz.qnssl.com/cover/ec293914-fc98-43e4-9778-e135720ec6d9" width = "300" alt="demo" align=center />
 
 ## Build Setup
 
@@ -17,4 +17,3 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 ```
-
